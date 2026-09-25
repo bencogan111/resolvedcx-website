@@ -1,0 +1,669 @@
+<!-- HOME PAGE CONTENT. Edit the text between the tags; leave the tags and class names alone.
+     Subpages (services, industries, careers) live in pages.py. Styles live in src/styles.css. -->
+<title>ResolvedCX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="ResolvedCX home">
+      <span class="logo-mark"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <span>Resolved<b>CX</b></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#why">Why us</a>
+      <a href="#services">Services</a>
+      <a href="#how">How it works</a>
+      <a href="#story">Our story</a>
+      <a href="#careers">Careers</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-primary" href="#contact">Talk to us</a>
+    <button type="button" class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span></span><span></span></button>
+  </div>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile" hidden>
+    <a href="#why">Why us</a><a href="#services">Services</a><a href="#how">How it works</a><a href="#story">Our story</a><a href="#careers">Careers</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Outsourced customer support · since 2017</p>
+        <h1>Every ticket, <span class="stamp">resolved.</span></h1>
+        <p class="lede">ResolvedCX builds dedicated, work-from-home support teams in the Philippines for fast-growing brands. Our agents work inside your helpdesk and your Slack, are overseen by an experienced ResolvedCX manager, and scale up or down as your volume does.</p>
+        <div class="ctas">
+          <a class="btn btn-primary" href="#contact">Build your team
+            <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a class="btn btn-ghost" href="#how">See how it works</a>
+        </div>
+        <div class="fine"><span>No long-term commitment</span><span>Billed only for hours worked</span><span>An experienced manager on every account</span></div>
+      </div>
+
+      <div class="queue" aria-label="Illustration of a support queue being worked by ResolvedCX agents">
+        <div class="queue-head">
+          <div class="title">Support queue<small>Example tickets</small></div>
+          <span class="live"><i></i>Agents online</span>
+        </div>
+        <ul class="tickets" id="tickets">
+          <li class="ticket">
+            <span class="ch" title="Email"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2.5" y="4.5" width="15" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 5.5l7 5 7-5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span>
+            <span class="msg">Tracking hasn't updated since Tuesday. Where's my order?</span>
+            <span class="status resolved">Resolved</span>
+            <span class="meta">#48213 · Email · 4m</span>
+          </li>
+          <li class="ticket">
+            <span class="ch" title="Chat"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 5.5a2 2 0 012-2h9a2 2 0 012 2v6a2 2 0 01-2 2H9l-3.5 3v-3h0a2 2 0 01-2-2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+            <span class="msg">Can I swap to a medium before it ships?</span>
+            <span class="status resolved">Resolved</span>
+            <span class="meta">#48214 · Chat · 1m</span>
+          </li>
+          <li class="ticket">
+            <span class="ch" title="Social"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 6.5v3.8l2.4 1.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+            <span class="msg">Comment: "Does this come in navy?"</span>
+            <span class="status pending">Pending</span>
+            <span class="meta">#48215 · Social · 2m</span>
+          </li>
+          <li class="ticket">
+            <span class="ch" title="Phone"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 3.5h2.5l1.2 3.2-1.6 1.1a8 8 0 004.1 4.1l1.1-1.6 3.2 1.2V14a2 2 0 01-2 2A11.5 11.5 0 013 5.5a2 2 0 012-2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+            <span class="msg">Update the billing address on my subscription</span>
+            <span class="status open">Open</span>
+            <span class="meta">#48216 · Phone · just now</span>
+          </li>
+          <li class="ticket">
+            <span class="ch" title="Email"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2.5" y="4.5" width="15" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 5.5l7 5 7-5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span>
+            <span class="msg">My package arrived damaged. Can I get a replacement?</span>
+            <span class="status open">Open</span>
+            <span class="meta">#48217 · Email · just now</span>
+          </li>
+        </ul>
+        <div class="clocks">
+          <div class="clock"><span class="city">New York</span><span class="t" id="clk-ny">--:--</span></div>
+          <div class="clock"><span class="city">Manila</span><span class="t" id="clk-mnl">--:--</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <figure class="band">
+    <img src="img/band.jpg" alt="Hundreds of ResolvedCX team members together in a ballroom at a company event">
+    <figcaption><div class="wrap"><span class="big">350 people. One team.</span><span class="small">The ResolvedCX team at a company gathering in the Philippines.</span></div></figcaption>
+  </figure>
+
+  <section class="logos" aria-label="Clients">
+    <div class="wrap">
+      <p class="eyebrow">Support teams for brands including</p>
+    </div>
+    <div class="ticker"><div class="ticker-track"><img src="logos/podium.png" alt="Podium" style="height:26px"><img src="logos/tunecore.png" alt="TuneCore" style="height:20px"><img src="logos/prose.png" alt="Prose" style="height:28px"><img src="logos/bambee.png" alt="Bambee" style="height:32px"><img src="logos/fellow.png" alt="Fellow" style="height:18px"><img src="logos/firstleaf.png" alt="Firstleaf" style="height:26px"><img src="logos/pattern.png" alt="Pattern" style="height:30px"><img src="logos/agelessrx.svg" alt="AgelessRx" style="height:22px"><img src="logos/andie.png" alt="Andie" style="height:24px"><img src="logos/twentyeight.png" alt="Twentyeight Health" style="height:28px"><img src="logos/dutch.png" alt="Dutch" style="height:26px"><span class="dup"><img src="logos/podium.png" alt="" aria-hidden="true" style="height:26px"><img src="logos/tunecore.png" alt="" aria-hidden="true" style="height:20px"><img src="logos/prose.png" alt="" aria-hidden="true" style="height:28px"><img src="logos/bambee.png" alt="" aria-hidden="true" style="height:32px"><img src="logos/fellow.png" alt="" aria-hidden="true" style="height:18px"><img src="logos/firstleaf.png" alt="" aria-hidden="true" style="height:26px"><img src="logos/pattern.png" alt="" aria-hidden="true" style="height:30px"><img src="logos/agelessrx.svg" alt="" aria-hidden="true" style="height:22px"><img src="logos/andie.png" alt="" aria-hidden="true" style="height:24px"><img src="logos/twentyeight.png" alt="" aria-hidden="true" style="height:28px"><img src="logos/dutch.png" alt="" aria-hidden="true" style="height:26px"></span></div></div>
+  </section>
+
+  <section class="block" id="why">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">Why ResolvedCX</p>
+          <h2>Remote-first, so agents stay and you pay less.</h2>
+        </div>
+        <p>Most outsourcers pack agents into call centers. We've been 100% work-from-home from day one. Without office overhead we can charge clients less and pay agents more, and well-paid agents who don't commute tend to stick around.</p>
+      </div>
+
+
+      <div class="why-wrap" style="margin-top:0">
+      <figure class="report" aria-label="Example of a CX report">
+        <div class="report-head"><span class="rt">CX report</span><span class="rtag">Example</span></div>
+        <p class="rsub">Support team · Sample week</p>
+        <div class="kpis">
+          <div class="kpi"><span class="kv">1h 12m</span><span class="kl">Median first response</span><span class="kd good">Target 2h</span></div>
+          <div class="kpi"><span class="kv">92%</span><span class="kl">CSAT</span><span class="kd good">Target 85%</span></div>
+          <div class="kpi"><span class="kv">98%</span><span class="kl">QA score</span><span class="kd good">Target 95%</span></div>
+          <div class="kpi"><span class="kv">1,284</span><span class="kl">Tickets resolved</span><span class="kd">+6% vs prior week</span></div>
+        </div>
+        <div class="rchart">
+          <span class="rcl">Tickets resolved per day</span>
+          <svg viewBox="0 0 280 96" role="img" aria-label="Bar chart of tickets resolved per day, Monday to Sunday: 212, 238, 221, 204, 187, 118, 104">
+            <g class="bars">
+              <rect x="6" y="14.3" width="28" height="61.7" rx="4"/><rect x="46" y="6.7" width="28" height="69.3" rx="4"/><rect x="86" y="11.7" width="28" height="64.3" rx="4"/>
+              <rect x="126" y="16.6" width="28" height="59.4" rx="4"/><rect x="166" y="21.6" width="28" height="54.4" rx="4"/><rect x="206" y="41.6" width="28" height="34.4" rx="4"/><rect x="246" y="45.7" width="28" height="30.3" rx="4"/>
+            </g>
+            <line class="base" x1="0" y1="76.5" x2="280" y2="76.5"/>
+            <g class="days"><text x="20" y="92">Mon</text><text x="60" y="92">Tue</text><text x="100" y="92">Wed</text><text x="140" y="92">Thu</text><text x="180" y="92">Fri</text><text x="220" y="92">Sat</text><text x="260" y="92">Sun</text></g>
+          </svg>
+        </div>
+        <figcaption>Illustrative numbers. Your data stays in your own helpdesk, and we can put together reporting like this whenever you ask.</figcaption>
+      </figure>
+      <div class="why">
+        <div class="why-item">
+          <span class="ic"><svg viewBox="0 0 22 22" aria-hidden="true"><path d="M4 6h14M4 11h14M4 16h8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+          <div><h3>Embedded in your stack</h3><p>Agents train directly with your team and work in your helpdesk (Zendesk, Gorgias and others) and your Slack, so escalations take minutes, not days. No playbook yet? We'll help you write it.</p></div>
+        </div>
+        <div class="why-item">
+          <span class="ic"><svg viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="8" r="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4.5 18.5a6.5 6.5 0 0113 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+          <div><h3>A manager who knows your brand</h3><p>Every account has an experienced ResolvedCX manager and team leads who handle scheduling, coaching and coverage, so you aren't managing agents yourself.</p></div>
+        </div>
+        <div class="why-item">
+          <span class="ic"><svg viewBox="0 0 22 22" aria-hidden="true"><path d="M11 18.5s-6.5-3.9-6.5-8.6A3.6 3.6 0 0111 8a3.6 3.6 0 016.5 1.9c0 4.7-6.5 8.6-6.5 8.6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+          <div><h3>Industry-leading agent retention</h3><p>Our agents stay with us far longer than is typical in outsourced support. Better pay, no commute and a real path into Tier 2, team lead and management roles keep them here, so the people who learn your product keep answering your customers.</p></div>
+        </div>
+        <div class="why-item">
+          <span class="ic"><svg viewBox="0 0 22 22" aria-hidden="true"><path d="M4 17V11M9 17V6M14 17v-8M19 17V4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+          <div><h3>Quality on your terms</h3><p>QA is set up around each client: we agree what gets reviewed and how often. Your data stays in your own tools, and we can provide reporting on response time, CSAT and QA whenever you want it.</p></div>
+        </div>
+        <div class="why-item">
+          <span class="ic"><svg viewBox="0 0 22 22" aria-hidden="true"><path d="M4 11h14M11 4v14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M6 6l10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" opacity=".35"/></svg></span>
+          <div><h3>Flexible by design</h3><p>Start with a few agents and add more as volume grows or the holidays hit. You're billed only for hours worked, with no long-term commitment.</p></div>
+        </div>
+        <div class="why-item">
+          <span class="ic"><svg viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="12" r="7" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M11 8.5V12l2.5 1.5M9 2.5h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+          <div><h3>Fast to staff</h3><p>With about 350 people already on the team, we fill new seats from people we know. Send us your training materials and we can generally have new agents onboarded within a week.</p></div>
+        </div>
+        <div class="why-item">
+          <span class="ic"><svg viewBox="0 0 22 22" aria-hidden="true"><path d="M3 11.5h3l2-5 4 10 2-5h5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div><h3>Lower cost, without cutting corners</h3><p>No call-center facilities to pay for means lower rates for you and better pay for agents.</p></div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="block" id="compare" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">How we compare</p>
+          <h2>The flexibility of your own team, without the overhead.</h2>
+        </div>
+        <p>Most companies weigh three options when support volume outgrows the founders. Here's how they differ.</p>
+      </div>
+      <div class="cmp-wrap">
+        <table class="cmp">
+          <thead><tr><th scope="col"><span class="sr">Question</span></th><th scope="col">Hire in-house</th><th scope="col">Typical call center</th><th scope="col" class="us">ResolvedCX</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Cost</th><td>US salaries, benefits and management time</td><td>Lower, with facility costs built into rates</td><td class="us">Lower: no call-center overhead, billed only for hours worked</td></tr>
+            <tr><th scope="row">Commitment</th><td>Employment</td><td>Often annual contracts and minimums</td><td class="us">No long-term commitment</td></tr>
+            <tr><th scope="row">Adding people</th><td>Weeks to months of recruiting</td><td>Depends on the vendor</td><td class="us">New agents generally onboarded within a week of getting your materials</td></tr>
+            <tr><th scope="row">Who runs the team</th><td>You</td><td>The vendor's floor supervisors</td><td class="us">An experienced ResolvedCX manager and team leads, working with you</td></tr>
+            <tr><th scope="row">Tools</th><td>Yours</td><td>Often the vendor's systems</td><td class="us">Yours: your helpdesk and your Slack</td></tr>
+            <tr><th scope="row">Quality visibility</th><td>Whatever you build yourself</td><td>Varies by vendor</td><td class="us">QA tailored to your team. Your data stays in your tools, with reporting on request</td></tr>
+            <tr><th scope="row">Where agents work</th><td>Your office or remote</td><td>A call-center floor</td><td class="us">100% work-from-home, mostly in the Philippines, plus a small team in Latin America</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="block services-bg" id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">Services</p>
+          <h2>Support, and the work around it.</h2>
+        </div>
+        <p>Start with one channel or hand us the whole queue, then add the back-office and admin work that piles up behind it. Every team is built around your volume, your hours and your tone of voice.</p>
+      </div>
+      <div class="svc-grid">
+        <div class="svc"><span class="tag">Email &amp; tickets</span><h3>Helpdesk support</h3><p>Order status, returns, exchanges, subscriptions and account questions, answered in your brand's voice.</p></div>
+        <div class="svc"><span class="tag">Live chat</span><h3>Real-time chat</h3><p>Fast, accurate answers while shoppers are still on your site, staffed to your peak hours.</p></div>
+        <div class="svc"><span class="tag">Voice</span><h3>Phone support</h3><p>Inbound calls handled by agents screened for clear, confident spoken English.</p></div>
+        <div class="svc"><span class="tag">Social</span><h3>Comment monitoring</h3><p>Replies to comments and DMs on your social channels, with problems escalated before they spread.</p></div>
+        <div class="svc"><span class="tag">Operations</span><h3>Order &amp; back-office</h3><p>Order edits, fraud checks, refunds, data entry and the other work behind every resolved ticket.</p></div>
+        <div class="svc"><span class="tag">Admin</span><h3>Virtual assistants</h3><p>Dedicated assistants for scheduling, inbox management, research and day-to-day admin, recruited and managed by us.</p></div>
+        <div class="svc"><span class="tag">Finance</span><h3>Bookkeeping</h3><p>Routine bookkeeping and finance admin handled by trained remote staff who work alongside your accountant.</p></div>
+        <div class="svc"><span class="tag">Growth</span><h3>Business development</h3><p>Lead research, list building, CRM upkeep and outreach support that keep your sales team selling.</p></div>
+      </div>
+      <div class="tiers"><span>Staffed at every level:</span><span class="pill">Tier 1</span><span class="pill">Tier 2</span><span class="pill">Team leads</span><span class="pill">Account managers</span></div>
+    </div>
+  </section>
+
+  <section class="block" id="how">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">How it works</p>
+          <h2>From first call to a working team.</h2>
+        </div>
+        <p>No setup fees and no minimum term. We scope the work with you, staff the team, and keep adjusting as you grow.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><span class="num">Step 1</span><h3>Scope</h3><p>We learn your channels, volume, hours and tone, and agree a statement of work sized to it.</p></div>
+        <div class="step"><span class="num">Step 2</span><h3>Staff</h3><p>We match agents from our bench or recruit to your profile. Everyone is screened for writing and speaking skills.</p></div>
+        <div class="step"><span class="num">Step 3</span><h3>Train</h3><p>Agents train directly with your team inside your tools. We help build documentation if you don't have it yet.</p></div>
+        <div class="step"><span class="num">Step 4</span><h3>Run &amp; scale</h3><p>An experienced manager runs your team day to day, with QA set up around your standards. Add or reduce agents whenever you need to.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top:0" aria-label="Photos of the ResolvedCX team">
+    <div class="wrap film-head">
+      <h2>Real people, not a call center.</h2>
+      <p>Every ResolvedCX agent works from home. These are some of our team in the Philippines.</p>
+    </div>
+    <div class="filmstrip"><div class="track"><img src="strip/t1.jpg" alt="" loading="lazy"><img src="strip/s1.jpg" alt="" loading="lazy"><img src="strip/t2.jpg" alt="" loading="lazy"><img src="strip/s2.jpg" alt="" loading="lazy"><img src="strip/t3.jpg" alt="" loading="lazy"><img src="strip/s3.jpg" alt="" loading="lazy"><img src="strip/t4.jpg" alt="" loading="lazy"><img src="strip/s4.jpg" alt="" loading="lazy"><img src="strip/t5.jpg" alt="" loading="lazy"><img src="strip/s5.jpg" alt="" loading="lazy"><img src="strip/t6.jpg" alt="" loading="lazy"><img src="strip/s6.jpg" alt="" loading="lazy"><img src="strip/t7.jpg" alt="" loading="lazy"><img src="strip/s7.jpg" alt="" loading="lazy"><img src="strip/t8.jpg" alt="" loading="lazy"><img src="strip/s8.jpg" alt="" loading="lazy"><img src="strip/t9.jpg" alt="" loading="lazy"><img src="strip/s9.jpg" alt="" loading="lazy"><img src="strip/t10.jpg" alt="" loading="lazy"><img src="strip/s10.jpg" alt="" loading="lazy"><img src="strip/t11.jpg" alt="" loading="lazy"><img src="strip/s11.jpg" alt="" loading="lazy"><img src="strip/t1.jpg" alt="" aria-hidden="true" loading="lazy"><img src="strip/s1.jpg" alt="" aria-hidden="true" loading="lazy"><img src="strip/t2.jpg" alt="" aria-hidden="true" loading="lazy"><img src="strip/s2.jpg" alt="" aria-hidden="true" loading="lazy"><img src="strip/t3.jpg" alt="" aria-hidden="true" loading="lazy"><img src="strip/s3.jpg" alt="" aria-hidden="true" loading="lazy"><img src="strip/t4.jpg" alt="" aria-hidden="true" loading="lazy"><img src="strip/s4.jpg" alt="" aria-hidden="true" loading="lazy"><img src="strip/t5.jpg" alt="" aria-hidden="true" loading="lazy"><img src="strip/s5.jpg" alt="" aria-hidden="true" loading="lazy"><img src="strip/t6.jpg" alt="" aria-hidden="true" loading="lazy"><img src="strip/s6.jpg" alt="" aria-hidden="true" loading="lazy"><img src="strip/t7.jpg" alt="" aria-hidden="true" loading="lazy"><img src="strip/s7.jpg" alt="" aria-hidden="true" loading="lazy"><img src="strip/t8.jpg" alt="" aria-hidden="true" loading="lazy"><img src="strip/s8.jpg" alt="" aria-hidden="true" loading="lazy"><img src="strip/t9.jpg" alt="" aria-hidden="true" loading="lazy"><img src="strip/s9.jpg" alt="" aria-hidden="true" loading="lazy"><img src="strip/t10.jpg" alt="" aria-hidden="true" loading="lazy"><img src="strip/s10.jpg" alt="" aria-hidden="true" loading="lazy"><img src="strip/t11.jpg" alt="" aria-hidden="true" loading="lazy"><img src="strip/s11.jpg" alt="" aria-hidden="true" loading="lazy"></div></div>
+  </section>
+
+
+  <section class="block" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">Who we work with</p>
+          <h2>Built for companies growing fast.</h2>
+        </div>
+        <p>Most of our clients are venture-backed brands whose ticket volume grows faster than they can hire. We've supported them through launches, holiday peaks and growth spurts.</p>
+      </div>
+      <div class="inds">
+        <div class="ind"><h3>DTC &amp; ecommerce</h3><p>Order, shipping, returns and subscription support for consumer brands, including holiday coverage that scales back down in January.</p><span class="who">Andie · Prose · Fellow · Firstleaf · Pattern</span></div>
+        <div class="ind"><h3>Health &amp; wellness</h3><p>Member support for health and wellness companies: accounts, billing, shipping and scheduling questions.</p><span class="who">AgelessRx · Twentyeight Health · Dutch</span></div>
+        <div class="ind"><h3>Software &amp; services</h3><p>Customer and account support for SaaS and service businesses, where accuracy and product knowledge matter most.</p><span class="who">Bambee · TuneCore</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top:0">
+    <div class="wrap">
+      <figure class="quote">
+        <span class="mark" aria-hidden="true">“</span>
+        <div>
+          <blockquote>ResolvedCX's innovative customer support model allowed us to expand our business quickly. Hubble was able to handle the double-digit, month over month increase in customer inquiries while maintaining strong customer satisfaction and fast response times.</blockquote>
+          <cite>Ben Cogan<span>Co-founder &amp; co-CEO, Hubble Contacts</span></cite>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="block" id="people" style="padding-top:0">
+    <div class="wrap">
+      <div class="story" id="story">
+        <div>
+          <p class="eyebrow">Our story</p>
+          <h2>Built by founders who needed it first.</h2>
+          <figure class="side-photo story-photo"><img src="img/story.jpg" alt="A group of ResolvedCX team members at the company event photo wall" loading="lazy"></figure>
+        </div>
+        <div>
+          <div class="story-body">
+            <p>ResolvedCX started in 2017 with a simple bet: experienced, well-paid agents working from home in the Philippines could give customers better support than a crowded call center, at a lower cost.</p>
+            <p>One of our first clients was Hubble Contacts, whose inquiries were growing by double digits every month. We kept up, word spread through the founder community, and several of our first clients are still with us today.</p>
+          </div>
+          <div class="ceo">
+            <img src="team/michael.png" alt="Portrait of Michael Feinberg">
+            <div>
+              <div class="nm">Michael Feinberg</div>
+              <div class="ti">CEO</div>
+              <p>Michael leads ResolvedCX and is the first call for new clients, from scoping a first team to scaling it.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="eyebrow leaders-label">Leading the team in the Philippines</p>
+      <div class="leaders">
+        <div class="leader"><img src="team/ruvel.png" alt="Portrait of Ruvel Batu"><span class="nm">Ruvel Batu</span><span class="ti">Philippines Country Director</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="block" id="careers" style="padding-top:0">
+    <div class="wrap">
+      <div class="hire">
+        <div>
+          <p class="eyebrow">Careers</p>
+          <h2>We're hiring in the Philippines.</h2>
+          <p>Work-from-home Customer Support Coordinator roles supporting well-known US brands, with paid training, performance bonuses and room to grow.</p>
+        </div>
+        <a class="btn btn-primary" href="@page:careers">See open roles <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="faq" style="padding-top:0">
+    <div class="wrap faq">
+      <div>
+        <p class="eyebrow">FAQ</p>
+        <h2>Questions we hear on every first call.</h2>
+      </div>
+      <div class="faq-list">
+        <details open><summary>Where are your agents located?</summary><p>Most of our agents work from home across the Philippines, with a smaller team in Latin America. We've been fully remote since 2017, with managers and team leads on the ground in the Philippines. Our US team is based in Brooklyn, New York.</p></details>
+        <details><summary>How does pricing work?</summary><p>We bill hourly per agent under a simple statement of work sized to your volume. You're billed only for hours worked, and you can add or reduce agents as your needs change, with no long-term commitment.</p></details>
+        <details><summary>How small can we start?</summary><p>Many clients start with a handful of agents on one channel and grow from there. We size the team to your actual ticket volume, not a minimum headcount.</p></details>
+        <details><summary>How quickly can agents start?</summary><p>Once we have your training materials, we can generally onboard new agents within a week.</p></details>
+        <details><summary>Can you help with work beyond customer support?</summary><p>Yes. We also staff virtual assistants, bookkeeping support, back-office processing and business development roles, recruited and managed the same way as our support teams.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="contact" style="padding-top:0">
+    <div class="wrap">
+      <div class="contact">
+        <div>
+          <p class="eyebrow" style="color:var(--sun)">Get started</p>
+          <h2 style="margin-top:12px">Let's build your support team.</h2>
+          <p class="sub">Tell us about your channels and ticket volume. We'll come back with a proposed team and a plan to have agents trained and live.</p>
+          <div class="direct">
+            <span>Prefer email? Write to Michael Feinberg, our CEO, directly:</span>
+            <div class="copyrow"><code id="email">michael@resolvedcx.com</code><button type="button" class="copybtn" id="copy">Copy</button></div>
+          </div>
+        </div>
+        <form id="form" novalidate data-recipient="michael@resolvedcx.com">
+          <label>Name<input id="f-name" name="name" autocomplete="name" required></label>
+          <label>Work email<input id="f-email" name="email" type="email" autocomplete="email" required></label>
+          <label>Company<input id="f-company" name="company" autocomplete="organization"></label>
+          <label>I'm interested in
+            <select id="f-type" name="type">
+              <option>Building a support team</option>
+              <option>Adding agents to an existing team</option>
+              <option>A virtual assistant or back-office role</option>
+            </select>
+          </label>
+          <label class="full">Tell us a bit more<textarea id="f-msg" name="message" placeholder="Channels, weekly ticket volume, hours you need covered, helpdesk you use..."></textarea></label>
+          <button class="btn full" type="submit">Send</button>
+          <p class="form-note full" id="form-note" role="status" hidden></p>
+          <p class="full form-alt">Looking for a job? <a href="#careers">See careers</a> instead.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+<article class="legal" id="privacy" hidden>
+  <div class="wrap"><div class="inner">
+    <a class="back" href="#top">&larr; Back to ResolvedCX</a>
+    <p class="draft-note"><b>Draft</b><span>This page is a working draft for review by ResolvedCX and its counsel. It is not yet in effect and should not be relied on until it is published in final form.</span></p>
+    <h1>Privacy Policy</h1>
+    <p class="eff">Effective date: [to be set on publication]</p>
+    <nav class="toc" aria-label="Policies"><a href="#privacy" aria-current="page">Privacy Policy</a><a href="#terms">Terms of Use</a><a href="#security">Security</a></nav>
+    <p class="lead">This policy explains how Customer Service Excellence LLC, doing business as ResolvedCX ("ResolvedCX," "we," "us"), collects, uses and shares personal information when you visit resolvedcx.com, contact us, apply to work with us, or otherwise interact with us.</p>
+
+    <h2>1. Scope</h2>
+    <p>This policy covers information we handle for our own purposes: website visitors, prospective and current client contacts, job applicants and business partners.</p>
+    <p>It does not cover personal information we process on behalf of our clients when our team provides customer support or other services to them, such as the details of a client's customer in a support ticket. In that role we act as a service provider (sometimes called a processor). We handle that information only on our client's instructions and under our agreement with that client, and the client's own privacy policy governs it. If you are a customer of one of our clients, please contact that company directly with privacy questions.</p>
+
+    <h2>2. Information we collect</h2>
+    <h3>Information you give us</h3>
+    <ul>
+      <li><strong>Inquiries:</strong> your name, work email, company, and anything you tell us about your support needs when you use our contact form or email us.</li>
+      <li><strong>Job applications:</strong> your name, contact details, resume or CV, work history, skills, assessment responses (such as mock-ticket answers and typing and language tests) and interview notes. If you are hired, we collect additional information needed for your employment or engagement, as required by law.</li>
+      <li><strong>Business relationships:</strong> contact and billing details of people at our clients, vendors and partners.</li>
+    </ul>
+    <h3>Information collected automatically</h3>
+    <p>When you visit our website, we and our service providers may collect your IP address, browser and device type, pages viewed, referring website and similar usage information through cookies and comparable technologies. We use this to run, secure and improve the site.</p>
+    <h3>Information from other sources</h3>
+    <p>We may receive information about you from people who refer you to us, from job boards and recruiting platforms you use to apply, and from publicly available professional profiles.</p>
+
+    <h2>3. How we use information</h2>
+    <ul>
+      <li>To respond to your questions and prepare proposals.</li>
+      <li>To provide our services, manage client relationships, and invoice and collect payment.</li>
+      <li>To recruit, assess and onboard team members.</li>
+      <li>To operate, secure, troubleshoot and improve our website.</li>
+      <li>To send business communications, which you can opt out of at any time.</li>
+      <li>To comply with legal obligations, enforce our agreements, and protect the rights, safety and property of ResolvedCX, our clients and others.</li>
+    </ul>
+
+    <h2>4. How we share information</h2>
+    <p>We share personal information only as described here:</p>
+    <ul>
+      <li><strong>Service providers</strong> that host our website and email or provide analytics, recruiting, payroll, payment or communication tools, under contractual confidentiality and data-protection obligations.</li>
+      <li><strong>Our team</strong>, including managers and staff in the Philippines who need the information to do their jobs.</li>
+      <li><strong>Professional advisers</strong> such as lawyers, accountants and auditors.</li>
+      <li><strong>For legal and safety reasons</strong>, when required by law or legal process, or to protect rights, safety and property.</li>
+      <li><strong>In business transfers</strong>, such as a merger, acquisition, financing or sale of all or part of our business, subject to this policy.</li>
+      <li><strong>With your consent</strong> or at your direction.</li>
+    </ul>
+    <p>We do not sell personal information, and we do not share it for cross-context behavioral advertising.</p>
+
+    <h2>5. International transfers</h2>
+    <p>We are based in the United States and our team works mainly from the Philippines, with some team members in Latin America. Your information may be processed in any of these countries, and by our service providers elsewhere. When we transfer information, we take steps designed to keep it protected as described in this policy and as required by applicable law.</p>
+
+    <h2>6. Retention</h2>
+    <p>We keep personal information for as long as we need it for the purposes above, including to meet legal, accounting and reporting requirements. We keep applicant information for [retention period to be confirmed] after a hiring decision so we can consider you for future roles, unless you ask us to delete it sooner.</p>
+
+    <h2>7. Security</h2>
+    <p>We use reasonable administrative, technical and physical safeguards to protect personal information. No method of transmission or storage is completely secure, so we cannot guarantee absolute security. Our <a href="#security">Security page</a> describes how we protect client data.</p>
+
+    <h2>8. Your choices and rights</h2>
+    <p>You can unsubscribe from our business emails at any time using the link in the email or by contacting us. You can set your browser to refuse or delete cookies, though parts of the site may not work as intended.</p>
+    <p>Depending on where you live, including California and other U.S. states with privacy laws, or the Philippines under the Data Privacy Act of 2012, you may have the right to:</p>
+    <ul>
+      <li>know what personal information we hold about you and get a copy of it;</li>
+      <li>correct inaccurate information;</li>
+      <li>delete your information;</li>
+      <li>object to or restrict certain processing, or withdraw your consent;</li>
+      <li>appeal a decision we make about your request.</li>
+    </ul>
+    <p>To make a request, email hello@resolvedcx.com. We will verify your identity before acting on it, and we will not discriminate against you for exercising your rights. Residents of the Philippines may also contact the National Privacy Commission.</p>
+
+    <h2>9. Children</h2>
+    <p>Our website and services are intended for businesses and adults. We do not knowingly collect personal information from children under 16, and applicants must be at least 18 years old.</p>
+
+    <h2>10. Links to other sites</h2>
+    <p>Our website may link to sites we don't control, including our clients' sites. Their privacy practices are governed by their own policies.</p>
+
+    <h2>11. Changes to this policy</h2>
+    <p>We may update this policy from time to time. We will post the updated version here and change the effective date. If we make material changes, we will take reasonable steps to let you know.</p>
+
+    <h2>12. Contact us</h2>
+    <p>Customer Service Excellence LLC (ResolvedCX)<br>[Mailing address to be confirmed], Brooklyn, New York<br>hello@resolvedcx.com</p>
+  </div></div>
+</article>
+
+<article class="legal" id="terms" hidden>
+  <div class="wrap"><div class="inner">
+    <a class="back" href="#top">&larr; Back to ResolvedCX</a>
+    <p class="draft-note"><b>Draft</b><span>This page is a working draft for review by ResolvedCX and its counsel. It is not yet in effect and should not be relied on until it is published in final form.</span></p>
+    <h1>Terms of Use</h1>
+    <p class="eff">Effective date: [to be set on publication]</p>
+    <nav class="toc" aria-label="Policies"><a href="#privacy">Privacy Policy</a><a href="#terms" aria-current="page">Terms of Use</a><a href="#security">Security</a></nav>
+    <p class="lead">These Terms of Use govern your use of resolvedcx.com (the "Site"), operated by Customer Service Excellence LLC, a New York limited liability company doing business as ResolvedCX ("ResolvedCX," "we," "us"). By using the Site, you agree to these Terms. If you don't agree, please don't use the Site.</p>
+
+    <h2>1. The Site and our services</h2>
+    <p>The Site gives general information about ResolvedCX and our services. It is not an offer to provide services. Any services we provide are governed by a separate written agreement, such as our Client Services Agreement and a statement of work. If one of those agreements conflicts with these Terms, the agreement controls.</p>
+
+    <h2>2. Using the Site</h2>
+    <p>You may use the Site for lawful purposes and in line with these Terms. You agree not to:</p>
+    <ul>
+      <li>use the Site in a way that breaks any law or infringes anyone's rights;</li>
+      <li>scrape, copy or harvest content or contact information from the Site by automated means;</li>
+      <li>try to gain unauthorized access to the Site or its systems, or interfere with its operation or security;</li>
+      <li>upload or transmit malware or other harmful code;</li>
+      <li>impersonate anyone or misrepresent your affiliation with anyone;</li>
+      <li>submit information that is false or that you don't have the right to share.</li>
+    </ul>
+
+    <h2>3. Intellectual property</h2>
+    <p>The Site and its content, including text, graphics, photos, logos and design, are owned by ResolvedCX or its licensors and are protected by intellectual property laws. You may view and print pages for your own business evaluation. You may not otherwise copy, modify, distribute or create derivative works without our written permission.</p>
+    <p>"ResolvedCX" and our logo are our trademarks. Client names and logos shown on the Site are trademarks of their respective owners and are used with permission. Their appearance does not mean those companies endorse any statement on the Site beyond their relationship with us.</p>
+
+    <h2>4. Information you submit</h2>
+    <p>When you submit information through the Site, you confirm it is accurate and that you have the right to share it. Our <a href="#privacy">Privacy Policy</a> explains how we handle it. If you send us ideas or feedback, we may use them without obligation to you.</p>
+
+    <h2>5. Job applicants</h2>
+    <p>Submitting an application does not guarantee an interview, offer or employment. Any engagement is governed by a separate written agreement.</p>
+    <p><strong>ResolvedCX never charges applicants fees</strong> for applications, training, equipment or placement, and we only contact applicants from an @resolvedcx.com email address. If someone asks you for payment in our name, don't pay, and please let us know at hello@resolvedcx.com.</p>
+
+    <h2>6. Third-party links</h2>
+    <p>The Site may link to websites we don't control. We are not responsible for their content, policies or practices, and a link is not an endorsement.</p>
+
+    <h2>7. Disclaimers</h2>
+    <p class="caps">The Site and its content are provided "as is" and "as available," without warranties of any kind, express or implied, including warranties of merchantability, fitness for a particular purpose, title and non-infringement. We do not warrant that the Site will be uninterrupted, error-free or free of harmful components, or that its content is complete or current.</p>
+
+    <h2>8. Limitation of liability</h2>
+    <p class="caps">To the fullest extent permitted by law, ResolvedCX and its members, managers, employees and agents will not be liable for any indirect, incidental, special, consequential or punitive damages, or any loss of profits, revenue, data or goodwill, arising from or related to your use of the Site. Our total liability for any claim arising from or related to the Site will not exceed one hundred U.S. dollars ($100).</p>
+    <p>Some jurisdictions don't allow certain limitations, so some of the above may not apply to you. This section does not affect liability under any separate services agreement, which is governed by its own terms.</p>
+
+    <h2>9. Indemnification</h2>
+    <p>You agree to indemnify and hold harmless ResolvedCX and its members, managers, employees and agents from any claims, losses and expenses, including reasonable attorneys' fees, arising from your misuse of the Site or your violation of these Terms.</p>
+
+    <h2>10. Governing law and venue</h2>
+    <p>These Terms are governed by the laws of the State of New York, without regard to its conflict-of-law rules. Any dispute arising from these Terms or the Site will be brought exclusively in the state or federal courts located in New York County, New York, and you consent to their jurisdiction.</p>
+
+    <h2>11. Changes</h2>
+    <p>We may update these Terms from time to time by posting a new version here and changing the effective date. If you keep using the Site after changes are posted, you accept them.</p>
+
+    <h2>12. General</h2>
+    <p>If any part of these Terms is found unenforceable, the rest remains in effect. Our failure to enforce a provision is not a waiver. These Terms, together with our Privacy Policy, are the entire agreement between you and us about the Site.</p>
+
+    <h2>13. Contact</h2>
+    <p>Questions about these Terms: hello@resolvedcx.com</p>
+  </div></div>
+</article>
+
+<article class="legal" id="security" hidden>
+  <div class="wrap"><div class="inner">
+    <a class="back" href="#top">&larr; Back to ResolvedCX</a>
+    <p class="draft-note"><b>Draft</b><span>This page is a working draft for review by ResolvedCX and its counsel. It is not yet in effect and should not be relied on until it is published in final form.</span></p>
+    <h1>Security</h1>
+    <p class="eff">Last updated: [to be set on publication]</p>
+    <nav class="toc" aria-label="Policies"><a href="#privacy">Privacy Policy</a><a href="#terms">Terms of Use</a><a href="#security" aria-current="page">Security</a></nav>
+    <p class="lead">Our agents talk to your customers every day, so protecting their information is part of the job. Here's how we handle it.</p>
+
+    <h2>Your data stays in your systems</h2>
+    <p>Our agents work inside the tools you already use and control: your helpdesk, ecommerce platform and team chat. You create their accounts and set their permissions. We don't copy your customers' information into separate ResolvedCX systems, and you can review or revoke access at any time.</p>
+
+    <h2>Access is limited and individual</h2>
+    <ul>
+      <li>Every agent gets a named account. We don't share logins.</li>
+      <li>Agents get only the access their role needs, and we ask clients to set permissions on that basis.</li>
+      <li>We use multi-factor authentication wherever your tools support it.</li>
+      <li>When someone leaves your account or ResolvedCX, we tell you right away and ask that their access be removed immediately.</li>
+    </ul>
+
+    <h2>Our people</h2>
+    <ul>
+      <li>Everyone on our team agrees to confidentiality obligations before working on a client account.</li>
+      <li>Onboarding includes training on data privacy, handling customer information, and spotting phishing and social engineering.</li>
+      <li>Team leads and managers supervise every account, and our QA reviews check that agents follow your data-handling rules.</li>
+    </ul>
+
+    <h2>Work-from-home standards</h2>
+    <p>Remote work means we set clear standards for every agent's workspace:</p>
+    <ul>
+      <li>a private workspace where others can't see the screen;</li>
+      <li>a password-protected, up-to-date computer with security software and an automatic screen lock;</li>
+      <li>a secured home internet connection;</li>
+      <li>no downloading, printing, photographing or storing client or customer data outside your systems.</li>
+    </ul>
+
+    <h2>If something goes wrong</h2>
+    <p>Agents are trained to report suspected security issues to their manager immediately. If we confirm an incident affecting your data, we'll notify you promptly and work with you to contain and fix it, in line with our agreement with you.</p>
+
+    <h2>Compliance</h2>
+    <p>We comply with the Philippines Data Privacy Act of 2012 and applicable U.S. law. We work within our clients' own compliance programs and can agree to client-specific confidentiality, data-protection and security terms in our services agreements.</p>
+
+    <h2>Questions or reports</h2>
+    <p>For security questions, or to report a vulnerability or concern, email hello@resolvedcx.com. If you need our security practices for a vendor review, ask your ResolvedCX account manager.</p>
+  </div></div>
+</article>
+
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="ResolvedCX home" style="font-size:18px">
+      <span class="logo-mark"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <span>Resolved<b>CX</b></span>
+    </a>
+    <nav aria-label="Footer">
+      <a href="#services">Services</a><a href="#how">How it works</a><a href="#careers">Careers</a><a href="#contact">Contact</a><a href="#privacy">Privacy</a><a href="#terms">Terms</a><a href="#security">Security</a>
+    </nav>
+    <span>Brooklyn, NY · Remote across the Philippines and Latin America<br>© 2026 Customer Service Excellence LLC, d/b/a ResolvedCX</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var b=document.getElementById('menu-btn'), m=document.getElementById('mobile-menu');
+  if(!b||!m) return;
+  function set(open){m.hidden=!open;b.setAttribute('aria-expanded',open?'true':'false');b.setAttribute('aria-label',open?'Close menu':'Open menu');}
+  b.addEventListener('click',function(){set(m.hidden);});
+  m.addEventListener('click',function(e){if(e.target.tagName==='A') set(false);});
+})();
+(function(){
+  var LEGAL=['privacy','terms','security'];
+  var NAMES={privacy:'Privacy Policy',terms:'Terms of Use',security:'Security'};
+  var main=document.getElementById('top');
+  function route(){
+    var h=(location.hash||'').slice(1);
+    var legal=LEGAL.indexOf(h)>-1;
+    main.hidden=legal;
+    LEGAL.forEach(function(k){var el=document.getElementById(k); if(el) el.hidden=(k!==h);});
+    if(legal){window.scrollTo(0,0);document.title=NAMES[h]+' · ResolvedCX';}
+    else{document.title='ResolvedCX'; if(h && h!=='top'){var t=document.getElementById(h); if(t) setTimeout(function(){t.scrollIntoView();},0);} }
+  }
+  window.addEventListener('hashchange',route); route();
+})();
+(function(){
+  // Clocks: New York and Manila
+  function fmt(tz){
+    try{return new Intl.DateTimeFormat('en-US',{hour:'numeric',minute:'2-digit',timeZone:tz}).format(new Date());}catch(e){return '';}
+  }
+  function tick(){
+    var ny=document.getElementById('clk-ny'), mn=document.getElementById('clk-mnl');
+    var a=fmt('America/New_York'), b=fmt('Asia/Manila');
+    if(a){ny.innerHTML=a.replace(/ (AM|PM)/,'<small>$1</small>');}
+    if(b){mn.innerHTML=b.replace(/ (AM|PM)/,'<small>$1</small>');}
+  }
+  tick(); setInterval(tick,15000);
+
+  // Ticket queue: move tickets through Open -> Pending -> Resolved
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var pool=[
+    ['email','Charged twice for my last order','Email'],
+    ['chat','Is the discount code still active?','Chat'],
+    ['phone','Need to pause my subscription for a month','Phone'],
+    ['social','DM: "My order says delivered but it isn’t here"','Social'],
+    ['email','How do I start a return for a gift?','Email'],
+    ['chat','Can you change my shipping address?','Chat']
+  ];
+  var icons={};
+  document.querySelectorAll('#tickets .ch').forEach(function(el){icons[el.title.toLowerCase()]=el.innerHTML;});
+  var list=document.getElementById('tickets');
+  var n=48218, p=0;
+  function setStatus(li,s){
+    var el=li.querySelector('.status');
+    el.className='status '+s+(s==='resolved'?' just':'');
+    el.textContent=s.charAt(0).toUpperCase()+s.slice(1);
+  }
+  function step(){
+    var items=Array.prototype.slice.call(list.children);
+    // advance pending -> resolved, open -> pending (oldest open first)
+    var pend=items.filter(function(li){return li.querySelector('.status.pending');});
+    var open=items.filter(function(li){return li.querySelector('.status.open');});
+    if(pend.length){setStatus(pend[0],'resolved');pend[0].querySelector('.meta').textContent=pend[0].querySelector('.meta').textContent.replace(/[^·]+$/,' '+(1+Math.floor(Math.random()*4))+'m');}
+    if(open.length){setStatus(open[0],'pending');}
+    // drop the oldest resolved ticket and add a new open one
+    var first=list.firstElementChild;
+    if(first && first.querySelector('.status.resolved')){
+      list.removeChild(first);
+      var t=pool[p++%pool.length];
+      var li=document.createElement('li');
+      li.className='ticket';
+      li.innerHTML='<span class="ch" title="'+t[2]+'">'+(icons[t[0]]||'')+'</span><span class="msg"></span><span class="status open">Open</span><span class="meta"></span>';
+      li.querySelector('.msg').textContent=t[1];
+      li.querySelector('.meta').textContent='#'+(n++)+' · '+t[2]+' · just now';
+      list.appendChild(li);
+    }
+  }
+  if(!reduce){setInterval(step,2600);}
+
+  // Copy email
+  var btn=document.getElementById('copy');
+  btn.addEventListener('click',function(){
+    var txt=document.getElementById('email').textContent;
+    function fallback(){var r=document.createRange();r.selectNodeContents(document.getElementById('email'));var s=window.getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Selected';}
+    try{
+      navigator.clipboard.writeText(txt).then(function(){btn.textContent='Copied';setTimeout(function(){btn.textContent='Copy';},1800);},fallback);
+    }catch(e){fallback();}
+  });
+
+  // Form (preview: no backend yet)
+  var form=document.getElementById('form'), note=document.getElementById('form-note');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var name=document.getElementById('f-name').value.trim(), email=document.getElementById('f-email').value.trim();
+    if(!name||!/.+@.+\..+/.test(email)){note.textContent='Add your name and a valid work email so we can reach you.';note.hidden=false;return;}
+    note.textContent='Thanks, '+name.split(' ')[0]+'. On the live site this goes straight to Michael. This preview can’t send yet, so please email michael@resolvedcx.com for now.';
+    note.hidden=false;
+  });
+})();
+</script>
