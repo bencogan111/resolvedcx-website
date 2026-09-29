@@ -16,14 +16,20 @@ importlib.reload(pages)
 
 T = open(R + 'src/template.html').read()
 M = json.load(open(R + 'static/i/manifest.json'))
+# Pages from the old Squarespace site, sent to their closest new equivalent
+OLD_URLS = {'/home/': '/', '/solutions/': '/services/customer-support/', '/team/': '/#story', '/contact-us/': '/#contact',
+            '/blog/': '/', '/blog/how-to-know-when-to-outsource-1/': '/', '/blog/h92cukvb73ioozng72gxsg6wbj96jk/': '/',
+            '/case-studies/': '/', '/case-studies/hubble/': '/', '/case-studies/cheers/': '/', '/case-studies/willow/': '/'}
+
 # ---- settings to fill in before launch --------------------------------------------
-FORM_ENDPOINT = ''   # contact-form address, e.g. a Formspree form that emails michael@resolvedcx.com
+FORM_ENDPOINT = 'https://formsubmit.co/ajax/michael@resolvedcx.com'   # FormSubmit relays each inquiry to this inbox
 GA_ID = ''           # Google Analytics 4 ID, e.g. G-XXXXXXX (nothing loads while empty)
 # -------------------------------------------------------------------------------------
 
 SITE = os.environ.get('SITE_URL', '').rstrip('/') or pages.SITE
+PREVIEW = urlparse(SITE).netloc.lower() not in ('www.resolvedcx.com', 'resolvedcx.com')   # previews are hidden from search engines
+if not PREVIEW: SITE = pages.SITE                    # the live site always uses https://www.resolvedcx.com
 BASE = urlparse(SITE).path.rstrip('/')          # e.g. /resolvedcx-website on GitHub Pages
-PREVIEW = SITE != pages.SITE                        # preview copies are hidden from search engines
 TODAY = datetime.date.today().isoformat()
 LOGO_SYMBOL = open(R + 'src/logo_symbol.html').read().strip()
 
@@ -197,19 +203,27 @@ JS = r'''
     try{navigator.clipboard.writeText(txt).then(function(){btn.textContent='Copied';setTimeout(function(){btn.textContent='Copy';},1800);},fallback);}catch(e){fallback();}
   });}
 
-  // Contact form. Set FORM_ENDPOINT (e.g. a Formspree form set to deliver to michael@resolvedcx.com) to go live.
+  // Contact form: posts to FORM_ENDPOINT (FormSubmit), which emails the inquiry to michael@resolvedcx.com.
   var FORM_ENDPOINT='/*ENDPOINT*/';
-  var form=document.getElementById('form'), note=document.getElementById('form-note');
+  var form=document.getElementById('form'), note=document.getElementById('form-note'), t0=Date.now();
   if(form){form.addEventListener('submit',function(e){
     e.preventDefault();
     var name=document.getElementById('f-name').value.trim(), email=document.getElementById('f-email').value.trim();
     if(!name||!/.+@.+\..+/.test(email)){note.textContent='Add your name and a valid work email so we can reach you.';note.hidden=false;return;}
+    var hp=document.getElementById('f-web');
+    function done(){note.textContent='Thanks, '+name.split(' ')[0]+'. Michael will get back to you within one business day.'; form.reset(); if(window.gtag) gtag('event','generate_lead');}
+    if((hp&&hp.value)||Date.now()-t0<2500){done();return;}
     if(!FORM_ENDPOINT){note.textContent='Thanks, '+name.split(' ')[0]+'. This form isn’t connected yet, so please email michael@resolvedcx.com for now.';note.hidden=false;return;}
-    var data={name:name,email:email,company:document.getElementById('f-company').value.trim(),interest:document.getElementById('f-type').value,message:document.getElementById('f-msg').value.trim(),page:location.pathname};
+    var company=document.getElementById('f-company').value.trim();
+    var data={Name:name,Email:email,Company:company,'Interested in':document.getElementById('f-type').value,Message:document.getElementById('f-msg').value.trim(),'Sent from':location.href,
+      _subject:'Website inquiry: '+name+(company?' ('+company+')':''),_replyto:email,_template:'table'};
     note.textContent='Sending…'; note.hidden=false;
+    var btn=form.querySelector('button[type=submit]'); if(btn) btn.disabled=true;
     fetch(FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
-      .then(function(r){if(!r.ok) throw new Error(r.status); note.textContent='Thanks, '+name.split(' ')[0]+'. Michael will get back to you within one business day.'; form.reset(); if(window.gtag) gtag('event','generate_lead');})
-      .catch(function(){note.textContent='That didn’t go through. Please email michael@resolvedcx.com instead.';});
+      .then(function(r){return r.json();})
+      .then(function(j){if(!j||String(j.success)!=='true') throw new Error('fail'); done();})
+      .catch(function(){note.textContent='That didn’t go through. Please email michael@resolvedcx.com instead.';})
+      .then(function(){if(btn) btn.disabled=false;});
   });}
 })();
 '''
@@ -401,6 +415,15 @@ def build_prod():
     nf = head('Page not found | ResolvedCX', 'This page does not exist.', '/404.html').replace('<meta name="robots" content="index,follow">', '<meta name="robots" content="noindex">')
     nf_body = links(HEADER + '\n<main id="page"><section class="sub-hero"><div class="wrap" style="grid-template-columns:1fr"><div><p class="eyebrow">404</p><h1>That page isn\'t here.</h1><p class="lede">It may have moved when we rebuilt the site.</p><div class="ctas"><a class="btn btn-primary" href="/">Go to the home page</a></div></div></div></section></main>\n' + FOOTER, 'prod', False)
     open(P + '404.html', 'w').write(rebase(nf + nf_body + foot))
+    # old Squarespace URLs -> new pages
+    for old, new in OLD_URLS.items():
+        dest = SITE + new
+        doc = (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Redirecting…</title>'
+               f'<link rel="canonical" href="{dest}"><meta name="robots" content="noindex">'
+               f'<meta http-equiv="refresh" content="0; url={BASE}{new}"><script>location.replace("{BASE}{new}")</script></head>'
+               f'<body><a href="{BASE}{new}">Continue to ResolvedCX</a></body></html>')
+        os.makedirs(P + old.strip('/'), exist_ok=True)
+        open(P + old.strip('/') + '/index.html', 'w').write(doc)
     # drop image sizes no page uses
     used = set()
     for dp, _, fs in os.walk(P):
