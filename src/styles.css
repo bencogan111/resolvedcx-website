@@ -451,3 +451,4 @@ footer a:hover{color:var(--ink)}
 .ind a.more{font:600 14.5px var(--body);color:var(--accent);text-decoration:none;margin-top:4px}
 .ind a.more:hover{text-decoration:underline}
 .note-inline{font-size:14px;color:var(--ink-3);margin-top:16px}
+.hp{position:absolute!important;left:-10000px;width:1px;height:1px;overflow:hidden}
