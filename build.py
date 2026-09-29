@@ -22,7 +22,7 @@ OLD_URLS = {'/home/': '/', '/solutions/': '/services/customer-support/', '/team/
             '/case-studies/': '/', '/case-studies/hubble/': '/', '/case-studies/cheers/': '/', '/case-studies/willow/': '/'}
 
 # ---- settings to fill in before launch --------------------------------------------
-FORM_ENDPOINT = 'https://formsubmit.co/ajax/michael@resolvedcx.com'   # FormSubmit relays each inquiry to this inbox
+FORM_ENDPOINT = ''   # form service URL (e.g. Formspree). While empty, the form opens a pre-filled email to michael@resolvedcx.com
 GA_ID = ''           # Google Analytics 4 ID, e.g. G-XXXXXXX (nothing loads while empty)
 # -------------------------------------------------------------------------------------
 
@@ -203,7 +203,7 @@ JS = r'''
     try{navigator.clipboard.writeText(txt).then(function(){btn.textContent='Copied';setTimeout(function(){btn.textContent='Copy';},1800);},fallback);}catch(e){fallback();}
   });}
 
-  // Contact form: posts to FORM_ENDPOINT (FormSubmit), which emails the inquiry to michael@resolvedcx.com.
+  // Contact form: posts to FORM_ENDPOINT if set; otherwise opens a pre-filled email to michael@resolvedcx.com.
   var FORM_ENDPOINT='/*ENDPOINT*/';
   var form=document.getElementById('form'), note=document.getElementById('form-note'), t0=Date.now();
   if(form){form.addEventListener('submit',function(e){
@@ -213,8 +213,15 @@ JS = r'''
     var hp=document.getElementById('f-web');
     function done(){note.textContent='Thanks, '+name.split(' ')[0]+'. Michael will get back to you within one business day.'; form.reset(); if(window.gtag) gtag('event','generate_lead');}
     if((hp&&hp.value)||Date.now()-t0<2500){done();return;}
-    if(!FORM_ENDPOINT){note.textContent='Thanks, '+name.split(' ')[0]+'. This form isn’t connected yet, so please email michael@resolvedcx.com for now.';note.hidden=false;return;}
     var company=document.getElementById('f-company').value.trim();
+    if(!FORM_ENDPOINT){
+      var sel=document.getElementById('f-type').value, msg=document.getElementById('f-msg').value.trim();
+      var body='Name: '+name+'\nEmail: '+email+(company?'\nCompany: '+company:'')+(sel?'\nInterested in: '+sel:'')+(msg?'\n\n'+msg:'');
+      location.href='mailto:michael@resolvedcx.com?subject='+encodeURIComponent('Website inquiry: '+name+(company?' ('+company+')':''))+'&body='+encodeURIComponent(body);
+      note.textContent='Your email app should open with your message to Michael. Just hit send. If nothing opened, email michael@resolvedcx.com.';note.hidden=false;
+      if(window.gtag) gtag('event','generate_lead');
+      return;
+    }
     var data={Name:name,Email:email,Company:company,'Interested in':document.getElementById('f-type').value,Message:document.getElementById('f-msg').value.trim(),'Sent from':location.href,
       _subject:'Website inquiry: '+name+(company?' ('+company+')':''),_replyto:email,_template:'table'};
     note.textContent='Sending…'; note.hidden=false;
