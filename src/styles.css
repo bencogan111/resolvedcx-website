@@ -454,3 +454,13 @@ footer a:hover{color:var(--ink)}
 .ind a.more:hover{text-decoration:underline}
 .note-inline{font-size:14px;color:var(--ink-3);margin-top:16px}
 .hp{position:absolute!important;left:-10000px;width:1px;height:1px;overflow:hidden}
+/* Full team grid (home) */
+.leaders.team{grid-template-columns:repeat(7,1fr);gap:26px 14px}
+.leaders.team .leader img{width:min(112px,100%);margin-bottom:8px}
+.leaders.team .leader .nm{font-size:15.5px}
+.leaders.team .leader .ti{font-size:12.5px;line-height:1.35}
+@media (max-width:1000px){.leaders.team{grid-template-columns:repeat(5,1fr)}}
+@media (max-width:700px){.leaders.team{grid-template-columns:repeat(4,1fr)}}
+@media (max-width:520px){.leaders.team{grid-template-columns:repeat(3,1fr);gap:22px 10px}.leaders.team .leader img{width:min(92px,100%)}}
+.team-more{margin-top:22px;text-align:center;font-weight:600}
+.team-more a{color:var(--accent);text-decoration:none}
