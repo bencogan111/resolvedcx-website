@@ -454,13 +454,18 @@ footer a:hover{color:var(--ink)}
 .ind a.more:hover{text-decoration:underline}
 .note-inline{font-size:14px;color:var(--ink-3);margin-top:16px}
 .hp{position:absolute!important;left:-10000px;width:1px;height:1px;overflow:hidden}
-/* Full team grid (home) */
-.leaders.team{grid-template-columns:repeat(7,1fr);gap:26px 14px}
-.leaders.team .leader img{width:min(112px,100%);margin-bottom:8px}
-.leaders.team .leader .nm{font-size:15.5px}
-.leaders.team .leader .ti{font-size:12.5px;line-height:1.35}
-@media (max-width:1000px){.leaders.team{grid-template-columns:repeat(5,1fr)}}
-@media (max-width:700px){.leaders.team{grid-template-columns:repeat(4,1fr)}}
-@media (max-width:520px){.leaders.team{grid-template-columns:repeat(3,1fr);gap:22px 10px}.leaders.team .leader img{width:min(92px,100%)}}
+/* Team carousel (home) */
+.team-carousel{position:relative;margin-bottom:clamp(40px,5vw,56px)}
+.tc-track{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 4*20px)/5);gap:20px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;padding:4px 2px 8px;outline:none}
+.tc-track::-webkit-scrollbar{display:none}
+.tc-track .leader{scroll-snap-align:start}
+.tc-track .leader img{width:min(140px,100%)}
+.tc-btn{position:absolute;top:58px;z-index:2;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink);display:grid;place-items:center;cursor:pointer;box-shadow:var(--shadow);transition:opacity .2s}
+.tc-btn svg{width:18px;height:18px}
+.tc-btn:hover{border-color:var(--accent);color:var(--accent)}
+.tc-prev{left:-22px}.tc-next{right:-22px}
+@media (max-width:1000px){.tc-track{grid-auto-columns:calc((100% - 3*20px)/4)}}
+@media (max-width:700px){.tc-track{grid-auto-columns:40%;gap:16px}.tc-btn{display:none}.team-carousel{margin-inline:calc(-1 * clamp(16px,4vw,40px))}.tc-track{padding-inline:clamp(16px,4vw,40px);scroll-padding-inline:clamp(16px,4vw,40px)}}
+@media (prefers-reduced-motion:reduce){.tc-track{scroll-behavior:auto}}
 .team-more{margin-top:22px;text-align:center;font-weight:600}
 .team-more a{color:var(--accent);text-decoration:none}
