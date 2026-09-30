@@ -28,7 +28,7 @@ LEADERS = '''
         <div class="leader"><img src="@team:iannovido" alt="Portrait of Ian Novido"><span class="nm">Ian Novido</span><span class="ti">Account Manager</span></div>
         <div class="leader"><img src="@team:dutch" alt="Portrait of Dutch Loque"><span class="nm">Dutch Loque</span><span class="ti">Account Manager</span></div>
       </div>
-      <p class="team-more"><a href="@home:people">Meet the whole team →</a></p>'''
+      <p class="team-more"><a href="@home:people">Meet more of the team →</a></p>'''
 
 def logos(names):
     alts = {'podium':'Podium','tunecore':'TuneCore','prose':'Prose','bambee':'Bambee','fellow':'Fellow','firstleaf':'Firstleaf','pattern':'Pattern','agelessrx':'AgelessRx','andie':'Andie','twentyeight':'Twentyeight Health','dutch':'Dutch','wholier':'Wholier'}
