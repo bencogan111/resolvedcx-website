@@ -22,6 +22,10 @@ LEADERS = '''
       <div class="leaders compact">
         <div class="leader"><img src="@team:michael" alt="Portrait of Michael Feinberg"><span class="nm">Michael Feinberg</span><span class="ti">CEO</span></div>
         <div class="leader"><img src="@team:ruvel" alt="Portrait of Ruvel Batu"><span class="nm">Ruvel Batu</span><span class="ti">Philippines Country Director</span></div>
+        <div class="leader"><img src="@team:iannovido" alt="Portrait of Ian Novido"><span class="nm">Ian Novido</span><span class="ti">Account Manager</span></div>
+        <div class="leader"><img src="@team:realm" alt="Portrait of Realm Pajarito"><span class="nm">Realm Pajarito</span><span class="ti">Human Resources Manager</span></div>
+        <div class="leader"><img src="@team:ianchu" alt="Portrait of Ian Levi Chu"><span class="nm">Ian Levi Chu</span><span class="ti">Consultant</span></div>
+        <div class="leader"><img src="@team:kevin" alt="Portrait of Kevin Jake Araneta"><span class="nm">Kevin Jake Araneta</span><span class="ti">Manager</span></div>
       </div>'''
 
 def logos(names):
