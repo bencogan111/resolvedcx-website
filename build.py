@@ -309,9 +309,9 @@ def head(title, desc, path, extra_ld=(), preload=None):
 <link rel="canonical" href="{url}">
 <meta name="robots" content="{ROBOTS}">
 <meta name="theme-color" content="#121833">
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" href="/favicon.png" type="image/png" sizes="192x192">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" href="/favicon.ico?v=2" sizes="any">
+<link rel="icon" href="/favicon.png?v=2" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ResolvedCX">
 <meta property="og:title" content="{title}">
