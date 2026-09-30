@@ -165,6 +165,30 @@ JS = r'''
     m.addEventListener('click',function(e){if(e.target.tagName==='A') set(false);});
   }
 })();
+(function(){
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('[data-carousel]').forEach(function(c){
+    var track=c.querySelector('.tc-track'), prev=c.querySelector('.tc-prev'), next=c.querySelector('.tc-next');
+    if(!track) return;
+    function step(){var k=track.querySelector('.leader'); return k?k.getBoundingClientRect().width+parseFloat(getComputedStyle(track).columnGap||20):track.clientWidth;}
+    function atEnd(){return track.scrollLeft+track.clientWidth>=track.scrollWidth-4;}
+    function go(dir){
+      if(dir>0&&atEnd()) track.scrollTo({left:0});
+      else if(dir<0&&track.scrollLeft<=4) track.scrollTo({left:track.scrollWidth});
+      else track.scrollBy({left:dir*step()});
+    }
+    var timer=null, stopped=reduce;
+    function stop(){stopped=true; if(timer){clearInterval(timer);timer=null;}}
+    function start(){if(!stopped&&!timer) timer=setInterval(function(){if(!document.hidden) go(1);},4000);}
+    function pause(){if(timer){clearInterval(timer);timer=null;}}
+    if(prev) prev.addEventListener('click',function(){stop();go(-1);});
+    if(next) next.addEventListener('click',function(){stop();go(1);});
+    ['pointerdown','wheel','touchstart','keydown'].forEach(function(ev){track.addEventListener(ev,stop,{passive:true});});
+    c.addEventListener('mouseenter',pause); c.addEventListener('mouseleave',start);
+    track.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){e.preventDefault();go(1);} if(e.key==='ArrowLeft'){e.preventDefault();go(-1);}});
+    if('IntersectionObserver' in window){new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting) start(); else pause();});},{threshold:.4}).observe(c);} else start();
+  });
+})();
 /*ROUTER*/
 (function(){
   function fmt(tz){try{return new Intl.DateTimeFormat('en-US',{hour:'numeric',minute:'2-digit',timeZone:tz}).format(new Date());}catch(e){return '';}}
