@@ -24,9 +24,9 @@ LEADERS = '''
         <div class="leader"><img src="@team:ruvel" alt="Portrait of Ruvel Batu"><span class="nm">Ruvel Batu</span><span class="ti">Philippines Country Director</span></div>
         <div class="leader"><img src="@team:jessa" alt="Portrait of Jessa Cura"><span class="nm">Jessa Cura</span><span class="ti">Operations Manager</span></div>
         <div class="leader"><img src="@team:ianchu" alt="Portrait of Ian Levi Chu"><span class="nm">Ian Levi Chu</span><span class="ti">Senior Manager</span></div>
-        <div class="leader"><img src="@team:realm" alt="Portrait of Realm Pajarito"><span class="nm">Realm Pajarito</span><span class="ti">Human Resources Manager</span></div>
         <div class="leader"><img src="@team:jessatrigo" alt="Portrait of Jessa Trigo"><span class="nm">Jessa Trigo</span><span class="ti">Customer Service Manager</span></div>
         <div class="leader"><img src="@team:iannovido" alt="Portrait of Ian Novido"><span class="nm">Ian Novido</span><span class="ti">Account Manager</span></div>
+        <div class="leader"><img src="@team:dutch" alt="Portrait of Dutch Loque"><span class="nm">Dutch Loque</span><span class="ti">Account Manager</span></div>
       </div>
       <p class="team-more"><a href="@home:people">Meet the whole team →</a></p>'''
 
